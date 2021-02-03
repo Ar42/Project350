@@ -67,7 +67,7 @@ header('location:Aut_Login.php');
 		<div class="container-fluid">
 			<div class="ttl">
 				<div class="d-flex justify-content-center">
-					<p align="center" class=" text-center createtxttt">Create Account</p>
+					<p align="center" class=" text-center createtxttt">update</p>
 				</div>
 			</div>
 			<form action="uploadRCC.php" method="post" enctype="multipart/form-data">
@@ -137,7 +137,7 @@ header('location:Aut_Login.php');
 
 
 
-							<button type="submit" name = "submit" class="btn btn-success">Create Account</button>
+							<button type="submit" name = "submit" class="btn btn-success">update</button>
 						</div>
 					</div>
 					<div class="col-2"></div>
