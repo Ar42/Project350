@@ -17,6 +17,18 @@ header('location:Aut_Login.php');
 			*{
 			font-family: "Times New Roman", Times, serif;
 			}
+			.main_div{
+				background-image: url('images/talha.jpg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover center;
+				height: 100vh;
+				filter: blur(20px);
+				background-attachment: fixed;
+			}
+			.second_div{
+				margin-top: -100vh;
+			}
 			p{
 				font-size: 1.5vw;
 			}
@@ -81,6 +93,15 @@ header('location:Aut_Login.php');
 				background-color: #000;
 				height: .1vw;
 			}
+			.fa{
+				font-size: 18px;
+			}
+			.fa-edit{
+				margin-top: 1vw;
+				/*color: #63c76a;*/
+				color: #25FC00;
+				font-weight: bold;
+			}
 			
 		</style>
 	</head>
@@ -105,11 +126,13 @@ header('location:Aut_Login.php');
 			// $res = mysqli_fetch_array($query);
 			while($res = mysqli_fetch_array($query)) {
 			?>
-			<div class="container-fluid">
+			<div class="main_div"></div>
+			<div class="container-fluid second_div">
 				
 				<div class="row">
-					<div class="col-3">
-						<a href="updates.php?id=<?php echo $res['id'] ?>"><button>Edit</button></a>
+					<div class="col-2"></div>
+					<div class="col-1">
+						<a href="DetailsEdit_CC.php?id=<?php echo $res['id'] ?>" data-toggle="tooltip" data-placement="bottom" title="edit your details"><i class="fa fa-edit" aria-hidden="true"  style="font-size: 2vw;"></i></a>
 					</div>
 					<div class="col-6 infos">
 						<p>Restaurant : <?php echo $res['name']; ?></p>
@@ -131,14 +154,17 @@ header('location:Aut_Login.php');
 					<div class="col-3"></div>
 				</div>
 
-				<div class="d-flex justify-content-center">
+				<div class="d-flex justify-content-center align-items-center">
 					<p class="text-center gallery_txt" >Gallery of Interiors</p>
 				</div>
 
 
 
 				<div class="row">
-					<div class="col-2"></div>
+					<div class="col-1"></div>
+					<div class="col-1">
+						<a href="PhotoEdit_CC.php?id=<?php echo $res['id'] ?>" data-toggle="tooltip" data-placement="bottom" title="change pictures"><i class="fa fa-edit" aria-hidden="true"  style="font-size: 2vw;"></i></a>
+					</div>
 					<div class="col-8">
 						<div class="row">
 							<div class="col-4 interior">
@@ -174,10 +200,15 @@ header('location:Aut_Login.php');
 				</div>
 				
 			</div>
-			<hr style="background-color: orange;height: .1vw;">
+			
 			<?php
 			}
 			?>
 		</div>
+		<script>
+	$(document).ready(function(){
+	  $('[data-toggle="tooltip"]').tooltip();
+	});
+	</script>
 	</body>
 </html>

@@ -15,6 +15,47 @@ header('location:Aut_Login.php');
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</head>
+	<style>
+		*{
+			font-family: "Times New Roman", Times, serif;
+		}
+		.main-form{
+			background: linear-gradient(#02aab0, #00cdac);
+			font-size: 1.5vw;
+			padding: 3vw;
+			margin: auto;
+			border-radius: 3vw;
+			box-shadow: 5px 10px 8px 10px #888888;
+		}
+		.createtxttt{
+			background: linear-gradient(#43cea2, #185a9d);
+			margin-top: 2.5vw;
+			margin-bottom: 3.5vw;
+			
+			color: #fff;
+			font-size: 1.5vw;
+			padding:.7vw 2vw .7vw 2vw;
+			border-radius: 8vw;
+			box-shadow: 5px 10px 8px 10px #888888;
+		}
+		label{
+			color: white;
+			font-size: 1.5vw;
+		}
+		.btn{
+			background: red;
+			color :#fff;
+			font-weight: bold;
+		}
+
+		.btn:hover{
+			background: #fff;
+			color :red;
+		}
+
+
+
+	</style>
 	<body>
 		<div class="container-fluid">
 			<form method="post" enctype="multipart/form-data">
@@ -45,33 +86,10 @@ header('location:Aut_Login.php');
 						}
 						
 						?>
-
-	<div class="card-header bg-dark">
-		<h1 class="text-white text-center" style="font-size: 1.5vw;">Edit</h1>
-	</div>
-	
-	
-	
-
-		
-		
-		
-			<!-- <div class="main-form">
-				<div class="form-group">
-					<label>Mobile</label>
-					<input type="text" name="mobile" class="form-control" placeholder="Community Centre Name" value="<?php echo $arrdata['mobile'];?>" style="margin-right: 10vw;"  autocomplete="off"  >
+				<div class="d-flex justify-content-center">
+					<p align="center" class=" text-center createtxttt">Edit Your Details</p>
 				</div>
-				
-				<div class="form-group">
-					<label>Email</label>
-					<input type="text" name="email" class="form-control" placeholder="Community Centre Name" value="<?php echo $arrdata['email'];?>" style="margin-right: 10vw;"  autocomplete="off"  >
-				</div>
-
-				
-					
-				<button type="submit" name = "submit" class="btn btn-success">Update</button>
-			</div>
- -->
+	
  				<div class="row">
 					
 					<div class="col-2"></div>
@@ -110,7 +128,7 @@ header('location:Aut_Login.php');
 
 
 
-							<button type="submit" name = "submit" class="btn btn-success">Create Account</button>
+							<button type="submit" name = "submit" class="btn">save</button>
 						</div>
 					</div>
 					<div class="col-2"></div>
